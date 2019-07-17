@@ -16,7 +16,7 @@
 </body>
 
 <body>
-  <div style="height:350px;width:1650px;border:solid 2px blue;overflow:scroll;overflow-x:hidden;overflow-y:scroll;">
+  <div style="height:350px;width:1792px;border:solid 2px blue;overflow:scroll;overflow-x:hidden;overflow-y:scroll;">
 
  <!-- <div class="login"> -->
 
@@ -51,7 +51,7 @@
     <form action="{{ url_for('predict_bitcoin')}}"method="post">
         <button type="submit" class="btn btn-primary btn-block btn-large">Predict Bitcoin. Purchase The Basic Model for only $10 Each Use</button>
         <div class="jumbotron">
-          <form action="{{ url_for('pay') }}" method="POST">
+          <!-- <form action="{{ url_for('pay') }}" method="POST">
             <script
               src="https://checkout.stripe.com/checkout.js" class="stripe-button"
               data-key="pk_live_2pO0yUvt9xKyjAo9rca8Vkc600FWtgJuqZ"
@@ -60,15 +60,15 @@
               data-description="Widget"
               data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
               data-locale="auto">
-            </script>
-          </form>
+            </script> -->
+          <!-- </form> -->
         </div>
       </form>
       <br>
    <form action="{{ url_for('predict_ethereum')}}"method="post">
        <button type="submit" class="btn btn-primary btn-block btn-large">Predict Etherum. Purchase The Basic Model for only $10 Each Use</button>
        <div class="jumbotron">
-         <form action="{{ url_for('pay') }}" method="POST">
+         <!-- <form action="{{ url_for('pay') }}" method="POST">
            <script
              src="https://checkout.stripe.com/checkout.js" class="stripe-button"
              data-key="pk_live_2pO0yUvt9xKyjAo9rca8Vkc600FWtgJuqZ"
@@ -78,14 +78,14 @@
              data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
              data-locale="auto">
            </script>
-         </form>
+         </form> -->
        </div>
    </form>
   <br>
   <form action="{{ url_for('predict_APPLE')}}"method="post">
       <button type="submit" class="btn btn-primary btn-block btn-large">Predict Apple. Purchase The Basic Model for only $10 Each Use</button>
       <div class="jumbotron">
-        <form action="{{ url_for('pay') }}" method="POST">
+        <!-- <form action="{{ url_for('pay') }}" method="POST">
           <script
             src="https://checkout.stripe.com/checkout.js" class="stripe-button"
             data-key="pk_live_2pO0yUvt9xKyjAo9rca8Vkc600FWtgJuqZ"
@@ -95,14 +95,14 @@
             data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
             data-locale="auto">
           </script>
-        </form>
+        </form> -->
       </div>
   </form>
  <br>
  <form action="{{ url_for('predict_MSFT')}}"method="post">
      <button type="submit" class="btn btn-primary btn-block btn-large">Predict Microsoft. Purchase The Basic Model for only $10 Each Use</button>
      <div class="jumbotron">
-       <form action="{{ url_for('pay') }}" method="POST">
+       <!-- <form action="{{ url_for('pay') }}" method="POST">
          <script
            src="https://checkout.stripe.com/checkout.js" class="stripe-button"
            data-key="pk_live_2pO0yUvt9xKyjAo9rca8Vkc600FWtgJuqZ"
@@ -112,7 +112,7 @@
            data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
            data-locale="auto">
          </script>
-       </form>
+       </form> -->
      </div>
  </form>
 </div>
@@ -120,6 +120,124 @@
 <body>
   <p><h1><font color="#6699CC"> RESULTS</h1> </font></p>
   <font color="#FF33CC"> {{ prediction_text }} </font>
+      <!-- Adding comments section -->
+
+      <div id="disqus_thread"></div>
+
+      <script>
+
+        (function() {
+
+          // DON'T EDIT BELOW THIS LINE
+
+          var d = document,
+
+            s = d.createElement("script");
+
+          s.src = "https://pier-paolo-website.disqus.com/embed.js";
+
+          s.setAttribute("data-timestamp", +new Date());
+
+          (d.head || d.body).appendChild(s);
+
+        })();
+
+      </script>
+
+      <noscript
+
+        >Please enable JavaScript to view the
+
+        <a href="https://disqus.com/?ref_noscript"
+
+          >comments powered by Disqus.</a
+
+        ></noscript
+
+      >
+
+    </main>
+
+
+
+    <footer id="main-footer">
+
+      Copyright &copy; 2019
+
+    </footer>
+
+
+
+    <script>
+
+      // Select DOM Items
+
+      const menuBtn = document.querySelector(".menu-btn");
+
+      const menu = document.querySelector(".menu");
+
+      const menuNav = document.querySelector(".menu-nav");
+
+      const menuBranding = document.querySelector(".menu-branding");
+
+      const navItems = document.querySelectorAll(".nav-item");
+
+
+
+      // Set Initial State Of Menu
+
+      let showMenu = false;
+
+
+
+      menuBtn.addEventListener("click", toggleMenu);
+
+
+
+      function toggleMenu() {
+
+        if (!showMenu) {
+
+          menuBtn.classList.add("close");
+
+          menu.classList.add("show");
+
+          menuNav.classList.add("show");
+
+          menuBranding.classList.add("show");
+
+          navItems.forEach(item => item.classList.add("show"));
+
+
+
+          // Set Menu State
+
+          showMenu = true;
+
+        } else {
+
+          menuBtn.classList.remove("close");
+
+          menu.classList.remove("show");
+
+          menuNav.classList.remove("show");
+
+          menuBranding.classList.remove("show");
+
+          navItems.forEach(item => item.classList.remove("show"));
+
+
+
+          // Set Menu State
+
+          showMenu = false;
+
+        }
+
+      }
+
+    </script>
+
 </body>
 </div>
 </body>
