@@ -19,9 +19,9 @@ This would create a serialized version of our model into a file model.pkl
 ```
 python app.py
 ```
-By default, flask will run on port 8080.
+By default, flask will run on port 5000.
 
-3. Navigate to URL http://localhost:8080
+3. Navigate to URL http://localhost:5000
 
 CHOOSE STOCK YOU WOULD LIKE TO PREDICT :
 ![alt text](https://i.imgur.com/ZI1FKwQ.png)
@@ -32,6 +32,4 @@ Next, WE PAY FOR THE STOCK WE WOULD LIKE TO PREDICT:
 AFTERWARDS, THE STOCK PREDICTION WILL BE OUTPUTTED AFTER PAYMENT!
 ![alt text](https://i.imgur.com/PrKA4zP.png)
 
-THE FINAL OUTPUT IS THE HEROKU HOST : https://free-basic-stock-pred.herokuapp.com/
-
-CURRENTLY RUNNING THE FREE BETA VERSION
+THE FINAL OUTPUT IS THE HEROKU HOST : https://stock-prediction-basic.herokuapp.com/   
