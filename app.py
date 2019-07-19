@@ -46,21 +46,21 @@ def predict_bitcoin():
     mini = mini()
     X = mini.fit_transform(X)
     future_x = X
-    X = X[3270:3277]
+    X = X[3283:3290]
     # future_x = X[-1]
     # x = X[:-1]
     bata = pd.read_csv('data/BTC-USD.csv')
     date = bata['Date']
-    date = date[3276:3277]
+    date = date[3289:3290]
     print(date)
     bata = pd.read_csv('data/BTC-USD.csv')
     date = bata['Date']
     print('PREDICTED HIGH')
     y = model.predict(future_x)
-    print(y[3276:3277])
+    print(y[3289:3290])
     y = model.predict(future_x)
-    print(y[3276:3277])
-    output =y[3276:3277]
+    print(y[3289:3290])
+    output =y[3289:3290]
     date = datetime.date.today()
     return render_template('index.html', prediction_text='THANK YOU FOR YOUR PURCHASE,\n PREDICTED HIGH FOR Bitcoin ON THE DAY OF {} IS $ {}'.format(date,output))
 
@@ -79,21 +79,21 @@ def predict_ethereum():
     mini = mini()
     X = mini.fit_transform(X)
     future_x = X
-    X = X[1423:1430]
+    X = X[1436:1443]
     # future_x = X[-1]
     # x = X[:-1]
     bata = pd.read_csv('data/ETH-USD.csv')
     date = bata['Date']
-    date = date[1429:1430]
+    date = date[1442:1443]
     print(date)
     bata = pd.read_csv('data/ETH-USD.csv')
     date = bata['Date']
     print('PREDICTED HIGH')
     y = eth_model.predict(future_x)
-    print(y[1429:1430])
+    print(y[1442:1443])
     y = eth_model.predict(future_x)
-    print(y[1429:1430])
-    output =y[1429:1430]
+    print(y[1442:1443])
+    output =y[1442:1443]
     date = datetime.date.today()
     return render_template('index.html', prediction_text='THANK YOU FOR YOUR PURCHASE,\n PREDICTED HIGH FOR Ethereum ON THE DAY OF {} IS $ {}'.format(date,output))
 
@@ -113,21 +113,21 @@ def predict_APPLE():
     mini = mini()
     X = mini.fit_transform(X)
     future_x = X
-    X = X[9716:9723]
+    X = X[9725:9732]
     # future_x = X[-1]
     # x = X[:-1]
     bata = pd.read_csv('data/AAPL.csv')
     date = bata['Date']
-    date = date[9722:9723]
+    date = date[9731:9732]
     print(date)
     bata = pd.read_csv('data/AAPL.csv')
     date = bata['Date']
     print('PREDICTED HIGH')
     y = AAPL_model.predict(future_x)
-    print(y[9722:9723])
+    print(y[9731:9732])
     y = AAPL_model.predict(future_x)
-    print(y[9722:9723])
-    output =y[9722:9723]
+    print(y[9731:9732])
+    output =y[9731:9732]
     date = datetime.date.today()
     return render_template('index.html', prediction_text='THANK YOU FOR YOUR PURCHASE,\n PREDICTED HIGH FOR APPLE ON THE DAY OF {} IS $ {}'.format(date,output))
 
@@ -146,21 +146,21 @@ def predict_MSFT():
     mini = mini()
     X = mini.fit_transform(X)
     future_x = X
-    X = X[8390:8397]
+    X = X[8399:8406]
     # future_x = X[-1]
     # x = X[:-1]
     bata = pd.read_csv('data/MSFT.csv')
     date = bata['Date']
-    date = date[8396:8397]
+    date = date[8405:8406]
     print(date)
     bata = pd.read_csv('data/MSFT.csv')
     date = bata['Date']
     print('PREDICTED HIGH')
     y = MSFT_model.predict(future_x)
-    print(y[8396:8397])
+    print(y[8405:8406])
     y = MSFT_model.predict(future_x)
-    print(y[8396:8397])
-    output =y[8396:8397]
+    print(y[8405:8406])
+    output =y[8405:8406]
     date = datetime.date.today()
     return render_template('index.html', prediction_text='THANK YOU FOR YOUR PURCHASE,\n PREDICTED HIGH FOR MICROSOFT ON THE DAY OF {} IS $ {}'.format(date,output))
 
@@ -181,20 +181,20 @@ def predict_api():
     mini = mini()
     X = mini.fit_transform(X)
     future_x = X
-    X = X[3270:3277]
+    X = X[3281:3288]
     # future_x = X[-1]
     # x = X[:-1]
     bata = pd.read_csv('data/BTC-USD.csv')
     date = bata['Date']
-    date = date[3276:3277]
+    date = date[3287:3288]
     print(date)
     bata = pd.read_csv('data/BTC-USD.csv')
     date = bata['Date']
     print('PREDICTED HIGH')
     y = model.predict(future_x)
-    print(y[3276:3277])
+    print(y[3287:3288])
 
-    output =y[3276:3277]
+    output =y[3287:3288]
 
     return jsonify(output)
 @app.route('/thanks')
