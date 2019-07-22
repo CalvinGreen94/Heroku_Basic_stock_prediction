@@ -31,18 +31,18 @@ pickle.dump(regressor, open('models/bit_model.pkl','wb'))
 # Loading model to compare the results
 model = pickle.load(open('models/bit_model.pkl','rb'))
 future_x = X
-X = X[3284:3291]
+X = X[3286:3294]
 # future_x = X[-1]
 # x = X[:-1]
 bata = pd.read_csv('data/BTC-USD.csv')
 date = bata['Date']
-date = date[3290:3291]
+date = date[3292:3294]
 print(date)
 bata = pd.read_csv('data/BTC-USD.csv')
 date = bata['Date']
 print('PREDICTED HIGH')
 y = model.predict(future_x)
-print(y[3290:3291])
+print(y[3292:3294])
 
 
 
@@ -68,22 +68,20 @@ pickle.dump(regressor, open('models/eth_model.pkl','wb'))
 # Loading model to compare the results
 model = pickle.load(open('models/eth_model.pkl','rb'))
 eth_future_x = eth_X
-eth_X = eth_X[1437:1444]
+eth_X = eth_X[1438:1447]
     # future_x = X[-1]
     # x = X[:-1]
 eth_bata = pd.read_csv('data/ETH-USD.csv')
 eth_date = eth_bata['Date']
-eth_date = eth_date[1443:1444]
+eth_date = eth_date[1445:1447]
 print(eth_date)
 eth_bata = pd.read_csv('data/ETH-USD.csv')
 eth_date = eth_bata['Date']
 print('PREDICTED HIGH')
 eth_y = model.predict(eth_future_x)
-print(eth_y[1443:1444])
-eth_y = model.predict(eth_future_x)
-print(eth_y[1443:1444])
+print(eth_y[1445:1447])
 
-eth_output =eth_y[1443:1444]
+eth_output =eth_y[1445:1447]
 
 AAPL_data = pd.read_csv('data/AAPL.csv')
 df0,df1 = AAPL_data.shape[0], AAPL_data.shape[1]
@@ -107,22 +105,20 @@ pickle.dump(regressor, open('models/AAPL_model.pkl','wb'))
 # Loading model to compare the results
 model = pickle.load(open('models/AAPL_model.pkl','rb'))
 AAPL_future_x = AAPL_X
-AAPL_X = AAPL_X[9726:9733]
+AAPL_X = AAPL_X[9726:9734]
     # future_x = X[-1]
     # x = X[:-1]
 AAPL_bata = pd.read_csv('data/AAPL.csv')
 AAPL_date = AAPL_bata['Date']
-AAPL_date = AAPL_date[9732:9733]
+AAPL_date = AAPL_date[9733:9734]
 print(AAPL_date)
 AAPL_bata = pd.read_csv('data/AAPL.csv')
 AAPL_date = AAPL_bata['Date']
 print('PREDICTED HIGH')
 AAPL_y = model.predict(AAPL_future_x)
-print(AAPL_y[9732:9733])
-AAPL_y = model.predict(AAPL_future_x)
-print(AAPL_y[9732:9733])
+print(AAPL_y[9732:9734])
 
-AAPL_output =AAPL_y[9732:9733]
+AAPL_output =AAPL_y[9732:9734]
 
 
 MSFT_data = pd.read_csv('data/MSFT.csv')
@@ -147,19 +143,18 @@ pickle.dump(regressor, open('models/MSFT_model.pkl','wb'))
 # Loading model to compare the results
 model = pickle.load(open('models/MSFT_model.pkl','rb'))
 MSFT_future_x = MSFT_X
-MSFT_X = MSFT_X[8400:8407]
+MSFT_X = MSFT_X[8400:8408]
     # future_x = X[-1]
     # x = X[:-1]
 MSFT_bata = pd.read_csv('data/MSFT.csv')
 MSFT_date = MSFT_bata['Date']
-MSFT_date = MSFT_date[8406:8407]
+MSFT_date = MSFT_date[8406:8408]
 print(MSFT_date)
 MSFT_bata = pd.read_csv('data/MSFT.csv')
 MSFT_date = MSFT_bata['Date']
 print('PREDICTED HIGH')
 MSFT_y = model.predict(MSFT_future_x)
-print(MSFT_y[8406:8407])
-MSFT_y = model.predict(MSFT_future_x)
-print(MSFT_y[8406:8407])
+print(MSFT_y[8406:8408])
 
-MSFT_output =MSFT_y[8406:8407]
+
+MSFT_output =MSFT_y[8406:8408]
