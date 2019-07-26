@@ -164,6 +164,39 @@ def predict_MSFT():
     date = datetime.date.today()
     return render_template('index.html', prediction_text='THANK YOU FOR YOUR PURCHASE,\n PREDICTED HIGH FOR MICROSOFT ON THE DAY OF {} IS $ {}'.format(date,output))
 
+
+@app.route('/predict_Dow',methods=['POST'])
+def predict_dow():
+    '''
+    For rendering results on HTML GUI
+    '''
+    import pandas as pd
+    from sklearn.preprocessing import MinMaxScaler as mini
+    data = pd.read_csv('data/DJI.csv')
+    data= data.drop(['Date'], axis =1)
+    data = data.drop('Adj Close',axis=1)
+    X= data.drop(['High'],axis=1)
+    y= data['High']
+    mini = mini()
+    X = mini.fit_transform(X)
+    future_x = X
+    X = X
+    # future_x = X[-1]
+    # x = X[:-1]
+    bata = pd.read_csv('data/DJI.csv')
+    date = bata['Date']
+    date = date[8686:8694]
+    print(date)
+    bata = pd.read_csv('data/BTC-USD.csv')
+    date = bata['Date']
+    print('PREDICTED HIGH')
+    y = model.predict(future_x)
+    print(y[8692:8693])
+    y = model.predict(future_x)
+    print(y[8692:8693]])
+    output =y[8692:8693]
+    date = datetime.date.today()
+    return render_template('index.html', prediction_text='THANK YOU FOR YOUR PURCHASE,\n PREDICTED HIGH FOR DOW ON THE DAY OF {} IS $ {}'.format(date,output))
 @app.route('/predict_api',methods=['GET'])
 def predict_api():
     '''
