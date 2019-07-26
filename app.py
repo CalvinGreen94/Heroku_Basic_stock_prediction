@@ -193,7 +193,7 @@ def predict_dow():
     y = model.predict(future_x)
     print(y[8692:8693])
     y = model.predict(future_x)
-    print(y[8692:8693]])
+    print(y[8692:8693])
     output =y[8692:8693]
     date = datetime.date.today()
     return render_template('index.html', prediction_text='THANK YOU FOR YOUR PURCHASE,\n PREDICTED HIGH FOR DOW ON THE DAY OF {} IS $ {}'.format(date,output))
