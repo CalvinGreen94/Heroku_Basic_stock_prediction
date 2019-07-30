@@ -10,7 +10,7 @@ import datetime
 app = Flask(__name__)
 pub_key ='pk_live_2pO0yUvt9xKyjAo9rca8Vkc600FWtgJuqZ'
 
-model = pickle.load(open('models/bit_model.pkl', 'rb'))
+bit_model = pickle.load(open('models/bit_model.pkl', 'rb'))
 eth_model = pickle.load(open('models/eth_model.pkl', 'rb'))
 AAPL_model = pickle.load(open('models/AAPL_model.pkl', 'rb'))
 MSFT_model = pickle.load(open('models/MSFT_model.pkl', 'rb'))
