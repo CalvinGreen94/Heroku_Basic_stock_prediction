@@ -39,18 +39,18 @@ pickle.dump(regressor, open('models/bit_model.pkl','wb'))
 # Loading model to compare the results
 model = pickle.load(open('models/bit_model.pkl','rb'))
 future_x = X
-X = X[3294:3301]
+X = X[3295:3302]
 # future_x = X[-1]
 # x = X[:-1]
 bata = pd.read_csv('data/BTC-USD.csv')
 date = bata['Date']
-date = date[3300:3301]
+date = date[3301:3302]
 print(date)
 bata = pd.read_csv('data/BTC-USD.csv')
 date = bata['Date']
 print('PREDICTED Close')
 y = model.predict(future_x)
-print(y[3300:3301])
+print(y[3301:3302])
 
 
 eth_data = pd.read_csv('data/ETH-USD.csv')
@@ -74,19 +74,19 @@ pickle.dump(regressor, open('models/eth_model.pkl','wb'))
 # Loading model to compare the results
 model = pickle.load(open('models/eth_model.pkl','rb'))
 eth_future_x = eth_X
-eth_X = eth_X[1447:1454]
+eth_X = eth_X[1448:1455]
     # future_x = X[-1]
     # x = X[:-1]
 eth_bata = pd.read_csv('data/ETH-USD.csv')
 eth_date = eth_bata['Date']
-eth_date = eth_date[1453:1454]
+eth_date = eth_date[1454:1455]
 eth_bata = pd.read_csv('data/ETH-USD.csv')
 eth_date = eth_bata['Date']
 print('PREDICTED Close')
 eth_y = model.predict(eth_future_x)
-eth_output =eth_y[1453:1454]
+eth_output =eth_y[1454:1455]
 print(eth_output)
-#
+
 
 AAPL_data = pd.read_csv('data/AAPL.csv')
 df0,df1 = AAPL_data.shape[0], AAPL_data.shape[1]
@@ -110,19 +110,19 @@ pickle.dump(regressor, open('models/AAPL_model.pkl','wb'))
 # Loading model to compare the results
 model = pickle.load(open('models/AAPL_model.pkl','rb'))
 AAPL_future_x = AAPL_X
-AAPL_X = AAPL_X[9732:9739]
+AAPL_X = AAPL_X[9733:9740]
     # future_x = X[-1]
     # x = X[:-1]
 AAPL_bata = pd.read_csv('data/AAPL.csv')
 AAPL_date = AAPL_bata['Date']
-AAPL_date = AAPL_date[9738:9739]
+AAPL_date = AAPL_date[9739:9740]
 print(AAPL_date)
 AAPL_bata = pd.read_csv('data/AAPL.csv')
 AAPL_date = AAPL_bata['Date']
 print('PREDICTED Close')
 AAPL_y = model.predict(AAPL_future_x)
-print(AAPL_y[9738:9739])
-AAPL_output =AAPL_y[9738:9739]
+print(AAPL_y[9739:9740])
+AAPL_output =AAPL_y[9739:9740]
 
 
 MSFT_data = pd.read_csv('data/MSFT.csv')
@@ -147,21 +147,21 @@ pickle.dump(regressor, open('models/MSFT_model.pkl','wb'))
 # Loading model to compare the results
 model = pickle.load(open('models/MSFT_model.pkl','rb'))
 MSFT_future_x = MSFT_X
-MSFT_X = MSFT_X[8406:8413]
+MSFT_X = MSFT_X[8407:8414]
     # future_x = X[-1]
     # x = X[:-1]
 MSFT_bata = pd.read_csv('data/MSFT.csv')
 MSFT_date = MSFT_bata['Date']
-MSFT_date = MSFT_date[8412:8413]
+MSFT_date = MSFT_date[8413:8414]
 print(MSFT_date)
 MSFT_bata = pd.read_csv('data/MSFT.csv')
 MSFT_date = MSFT_bata['Date']
 print('PREDICTED Close')
 MSFT_y = model.predict(MSFT_future_x)
-print(MSFT_y[8412:8413])
+print(MSFT_y[8413:8414])
 
 
-MSFT_output =MSFT_y[8412:8413]
+MSFT_output =MSFT_y[8413:8414]
 
 
 # # Importing the libraries
@@ -196,15 +196,15 @@ pickle.dump(regressor, open('models/dow_model.pkl','wb'))
 # # Loading model to compare the results
 dow_model = pickle.load(open('models/dow_model.pkl','rb'))
 dow_future_x = dow_X
-dow_X = dow_X[8687:8695]
+dow_X = dow_X[8689:8696]
 # future_x = X[-1]
 # x = X[:-1]
 dow_bata = pd.read_csv('data/DJI.csv')
 dow_date = dow_bata['Date']
-dow_date = dow_date[8694:8695]
+dow_date = dow_date[8695:8696]
 dow_bata = pd.read_csv('data/DJI.csv')
 dow_date = dow_bata['Date']
-print(dow_date[8694:8695])
+print(dow_date[8695:8696])
 print('PREDICTED Close')
 dow_y = dow_model.predict(dow_future_x)
-print(dow_y[8694:8695])
+print(dow_y[8695:8696])
